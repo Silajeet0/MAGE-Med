@@ -1,0 +1,39 @@
+{
+  "manifest_version": "1.0.0",
+  "dataset_id": "mage-med-synthetic-fhir-r4",
+  "dataset_version": "1.0.0",
+  "description": "SYNTHETIC TEST DATA ONLY - deterministic FHIR R4 fixtures for a fictional patient",
+  "synthetic": true,
+  "contains_real_patient_data": false,
+  "seed": 20261123,
+  "generator": "scripts/generate_synthetic_fhir.py",
+  "source_standard": "HL7 FHIR R4 (4.0.1)",
+  "license": "Repository research fixture; no third-party patient data",
+  "files": [
+    {
+      "path": "data/synthetic/fhir/r4/synthetic_patient_bundle.json",
+      "sha256": "00fe9b4def75c60f1d16b57e784820063866b4fe8af353bed9d24499997ebcdf",
+      "expected_reference_validation": "valid",
+      "resource_types": [
+        "Patient",
+        "Encounter",
+        "Condition",
+        "Observation",
+        "MedicationRequest",
+        "AllergyIntolerance",
+        "DocumentReference"
+      ]
+    },
+    {
+      "path": "data/synthetic/fhir/r4/synthetic_invalid_reference_bundle.json",
+      "sha256": "0632ba2d191f8095fe3eed16880b44ce75134e0b937f9bc027e9c6d69ab29f6e",
+      "expected_reference_validation": "invalid_deliberately_unresolved_reference",
+      "resource_types": ["Patient", "Observation"]
+    }
+  ],
+  "limitations": [
+    "Fixtures exercise only the supported PoC resource subset.",
+    "They are not clinical examples and must not be used for medical decisions.",
+    "The invalid-reference fixture is intentionally unsuitable for import."
+  ]
+}

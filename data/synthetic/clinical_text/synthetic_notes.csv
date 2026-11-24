@@ -1,0 +1,2 @@
+id,note_type,title,authored_at,source_label,text
+synthetic-csv-note,progress,SYNTHETIC CSV narrative,2026-01-15T09:28:00Z,SYNTHETIC fixture generator; not clinician-authored,SYNTHETIC NOTE — CSV parser fixture with no inferred patient link.

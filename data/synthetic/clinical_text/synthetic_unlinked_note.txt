@@ -1,0 +1,3 @@
+SYNTHETIC NOTE — FICTIONAL TEST DATA, NOT CLINICIAN-AUTHORED.
+
+This unlinked narrative exists to verify that filenames and text are never used to infer patient identity.

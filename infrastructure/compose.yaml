@@ -1,0 +1,26 @@
+name: mage-med
+
+services:
+  neo4j:
+    image: neo4j:2026.10.1-community
+    environment:
+      MAGE_MED_NEO4J_PASSWORD: ${MAGE_MED_NEO4J_PASSWORD:-mage-med-local}
+      NEO4J_AUTH: neo4j/${MAGE_MED_NEO4J_PASSWORD:-mage-med-local}
+    ports:
+      - "${MAGE_MED_NEO4J_BROWSER_PORT:-7474}:7474"
+      - "${MAGE_MED_NEO4J_BOLT_PORT:-7687}:7687"
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "cypher-shell -u neo4j -p '$$MAGE_MED_NEO4J_PASSWORD' 'RETURN 1' >/dev/null 2>&1",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+volumes:
+  neo4j_data:

@@ -1,0 +1,36 @@
+{
+  "manifest_version": "1.0.0",
+  "dataset_id": "mage-med-synthetic-clinical-text",
+  "dataset_version": "1.0.0",
+  "description": "SYNTHETIC FICTIONAL NARRATIVES - NOT CLINICIAN-AUTHORED",
+  "synthetic": true,
+  "contains_real_patient_data": false,
+  "seed": 20261123,
+  "generator": "repository-authored deterministic fixtures",
+  "license": "Repository research fixture; no third-party patient data",
+  "files": [
+    {
+      "path": "data/synthetic/clinical_text/synthetic_notes.json",
+      "sha256": "1d9c8cbc1f7ec4ccb2b4a42bbe3d9fc264d8f298cff234e6b68879ea65707e83"
+    },
+    {
+      "path": "data/synthetic/clinical_text/synthetic_notes.csv",
+      "sha256": "72ebc10da2b61b1cf92ebd438801acc2869c236b7cd727e014d2a19f75e0851b"
+    },
+    {
+      "path": "data/synthetic/clinical_text/synthetic_unlinked_note.txt",
+      "sha256": "cb50fff88e13c0748d1ca80d7b38f665abce6bb362923ec5852015c5d45622d9"
+    }
+  ],
+  "semantic_cases": [
+    "structured-text conflict retained without reconciliation",
+    "explicit negation retained verbatim",
+    "temporally outdated narrative retains authored time",
+    "unlinked note remains unlinked"
+  ],
+  "limitations": [
+    "Narratives are fixture-generator text and were not written by clinicians.",
+    "Fixtures are not medical findings and must not be used for decisions.",
+    "No model training or inference produced these fixtures."
+  ]
+}

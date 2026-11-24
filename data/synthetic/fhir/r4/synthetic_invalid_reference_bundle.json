@@ -1,0 +1,67 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d",
+      "resource": {
+        "id": "3a00db93-1f84-5801-b358-bf9b46340c8d",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "name": [
+          {
+            "text": "SYNTHETIC Broken Reference Testpatient"
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1403b0c5-99af-52fb-81e6-4e76da57031f",
+      "resource": {
+        "code": {
+          "text": "SYNTHETIC reference-resolution test"
+        },
+        "effectiveDateTime": "2026-01-15T08:45:00Z",
+        "id": "1403b0c5-99af-52fb-81e6-4e76da57031f",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/DELIBERATELY-MISSING"
+        },
+        "valueString": "SYNTHETIC test value"
+      }
+    }
+  ],
+  "id": "c39088e4-8dc2-59ed-87a9-475b3459d971",
+  "identifier": {
+    "system": "https://mage-med.example/synthetic-bundle-id",
+    "value": "SYNTHETIC-BROKEN-REFERENCE-20261123"
+  },
+  "meta": {
+    "tag": [
+      {
+        "code": "SYNTHETIC",
+        "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+        "system": "https://mage-med.example/tags"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "timestamp": "2026-01-15T10:00:00Z",
+  "type": "collection"
+}

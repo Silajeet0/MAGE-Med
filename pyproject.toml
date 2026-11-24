@@ -1,0 +1,75 @@
+[project]
+name = "mage-med-workspace"
+version = "0.1.0"
+description = "Development tooling for the MAGE-Med research proof of concept"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "httpx2==2.13.1",
+  "mypy==2.4.1",
+  "pytest==9.2.0",
+  "ruff==0.17.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = [
+  "apps/backend",
+  "packages/contracts",
+  "services/ingestion",
+  "services/knowledge_graph",
+]
+
+[tool.uv.sources]
+mage-med-contracts = { workspace = true }
+mage-med-ingestion = { workspace = true }
+mage-med-knowledge-graph = { workspace = true }
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+pythonpath = ["."]
+testpaths = [
+  "apps/backend/tests",
+  "packages/contracts/tests",
+  "services/ingestion/tests",
+  "services/knowledge_graph/tests",
+  "tests",
+]
+markers = [
+  "neo4j_smoke: requires a real reachable Neo4j service",
+]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+packages = [
+  "mage_med_backend",
+  "mage_med_contracts",
+  "mage_med_ingestion",
+  "mage_med_knowledge_graph",
+]
+
+[[tool.mypy.overrides]]
+module = "alembic.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "fhirclient.*"
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["apps/frontend/dist", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

@@ -1,0 +1,362 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d",
+      "resource": {
+        "active": true,
+        "birthDate": "1975-01-01",
+        "gender": "female",
+        "id": "3a00db93-1f84-5801-b358-bf9b46340c8d",
+        "identifier": [
+          {
+            "system": "https://mage-med.example/synthetic-patient-id",
+            "value": "SYNTHETIC-PATIENT-001"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "SYNTHETIC-Testpatient",
+            "given": [
+              "Ada"
+            ],
+            "text": "SYNTHETIC Ada Testpatient",
+            "use": "official"
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839",
+      "resource": {
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "id": "dbf90420-8b36-5820-a45a-35531521c839",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "period": {
+          "end": "2026-01-15T09:30:00Z",
+          "start": "2026-01-15T09:00:00Z"
+        },
+        "resourceType": "Encounter",
+        "status": "finished",
+        "subject": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "185349003",
+                "display": "Encounter for check up",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46f8f2f5-8c9e-56f8-bf72-d05632ec9f1e",
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "encounter": {
+          "reference": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839"
+        },
+        "id": "46f8f2f5-8c9e-56f8-bf72-d05632ec9f1e",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "onsetDateTime": "2024-06-01T10:00:00Z",
+        "recordedDate": "2026-01-15T09:10:00Z",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:30e7c8fa-d205-5b43-9a66-131387fcbb9c",
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "display": "Laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2026-01-15T08:45:00Z",
+        "encounter": {
+          "reference": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839"
+        },
+        "id": "30e7c8fa-d205-5b43-9a66-131387fcbb9c",
+        "issued": "2026-01-15T09:05:00Z",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "high": {
+              "code": "%",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%",
+              "value": 6.5
+            },
+            "text": "SYNTHETIC example reference threshold"
+          }
+        ],
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        },
+        "valueQuantity": {
+          "code": "%",
+          "system": "http://unitsofmeasure.org",
+          "unit": "%",
+          "value": 7.2
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c64abf09-63d3-5131-b932-56c6b7b317b4",
+      "resource": {
+        "authoredOn": "2026-01-15T09:20:00Z",
+        "dosageInstruction": [
+          {
+            "text": "SYNTHETIC test instruction: one tablet daily"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839"
+        },
+        "id": "c64abf09-63d3-5131-b932-56c6b7b317b4",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "860975",
+              "display": "metformin hydrochloride 500 MG Oral Tablet",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            }
+          ]
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "resourceType": "MedicationRequest",
+        "status": "active",
+        "subject": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a6b47950-ead1-58f2-93fc-3f17d21e27b6",
+      "resource": {
+        "category": [
+          "medication"
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "764146007",
+              "display": "Penicillin",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "criticality": "high",
+        "encounter": {
+          "reference": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839"
+        },
+        "id": "a6b47950-ead1-58f2-93fc-3f17d21e27b6",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "code": "271807003",
+                    "display": "Skin rash",
+                    "system": "http://snomed.info/sct"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "recordedDate": "2026-01-15T09:12:00Z",
+        "resourceType": "AllergyIntolerance",
+        "type": "allergy",
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b642d703-633a-5039-9f48-38769de61fad",
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "creation": "2026-01-15T09:25:00Z",
+              "data": "U1lOVEhFVElDIGNvbnN1bHRhdGlvbiBub3RlLiBQYXRpZW50IHJlcG9ydHMgbm8gbWVkaWNhdGlvbiBzaWRlIGVmZmVjdHMuIFRoaXMgcmVjb3JkIGlzIGZpY3Rpb25hbCBhbmQgZm9yIHRlc3Rpbmcgb25seS4=",
+              "title": "SYNTHETIC consultation note"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "urn:uuid:dbf90420-8b36-5820-a45a-35531521c839"
+            }
+          ]
+        },
+        "date": "2026-01-15T09:25:00Z",
+        "description": "SYNTHETIC consultation note - NOT A REAL CLINICAL RECORD",
+        "id": "b642d703-633a-5039-9f48-38769de61fad",
+        "meta": {
+          "tag": [
+            {
+              "code": "SYNTHETIC",
+              "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+              "system": "https://mage-med.example/tags"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:3a00db93-1f84-5801-b358-bf9b46340c8d"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11488-4",
+              "display": "Consult note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "id": "edabef23-f23e-554e-ac4c-e570ec40cec3",
+  "identifier": {
+    "system": "https://mage-med.example/synthetic-bundle-id",
+    "value": "SYNTHETIC-FHIR-R4-20261123"
+  },
+  "meta": {
+    "tag": [
+      {
+        "code": "SYNTHETIC",
+        "display": "SYNTHETIC TEST DATA - NOT A REAL PATIENT",
+        "system": "https://mage-med.example/tags"
+      }
+    ]
+  },
+  "resourceType": "Bundle",
+  "timestamp": "2026-01-15T10:00:00Z",
+  "type": "collection"
+}

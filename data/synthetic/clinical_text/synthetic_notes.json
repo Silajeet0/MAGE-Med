@@ -1,0 +1,45 @@
+{
+  "dataset_label": "SYNTHETIC TEST DATA - FICTIONAL AND NOT CLINICIAN-AUTHORED",
+  "seed": 20261123,
+  "notes": [
+    {
+      "id": "synthetic-consultation-2026",
+      "note_type": "consultation",
+      "title": "SYNTHETIC consultation narrative",
+      "authored_at": "2026-01-15T09:20:00Z",
+      "source_label": "SYNTHETIC fixture generator; not clinician-authored",
+      "patient_id": "9441a0a3-466d-5e01-9b73-6bfdd016ec69",
+      "encounter_id": "3f27cfd9-2161-5959-96d6-54a1edc34571",
+      "text": "SYNTHETIC NOTE — FICTIONAL TEST DATA, NOT CLINICIAN-AUTHORED.\n\nHISTORY:\nThis generated narrative accompanies the fictional 2026 encounter.\n\nASSESSMENT:\nThe fixture records an HbA1c value of 7.2 percent for traceability testing."
+    },
+    {
+      "id": "synthetic-contradictory-note",
+      "note_type": "progress",
+      "title": "SYNTHETIC contradictory narrative",
+      "authored_at": "2026-01-15T09:25:00Z",
+      "source_label": "SYNTHETIC fixture generator; not clinician-authored",
+      "patient_id": "9441a0a3-466d-5e01-9b73-6bfdd016ec69",
+      "encounter_id": "3f27cfd9-2161-5959-96d6-54a1edc34571",
+      "text": "SYNTHETIC NOTE — INTENTIONAL CONFLICT FOR TESTING. This generated text states HbA1c is 6.1 percent, conflicting with the synthetic structured observation. It is not a medical finding."
+    },
+    {
+      "id": "synthetic-negated-note",
+      "note_type": "clinical_narrative",
+      "title": "SYNTHETIC negation narrative",
+      "authored_at": "2026-01-15T09:27:00Z",
+      "source_label": "SYNTHETIC fixture generator; not clinician-authored",
+      "patient_id": "9441a0a3-466d-5e01-9b73-6bfdd016ec69",
+      "encounter_id": "3f27cfd9-2161-5959-96d6-54a1edc34571",
+      "text": "SYNTHETIC NOTE — NEGATION TEST. The fictional narrative says the test subject denies a penicillin allergy. The negation is retained verbatim and is not reconciled automatically."
+    },
+    {
+      "id": "synthetic-outdated-history",
+      "note_type": "clinical_history",
+      "title": "SYNTHETIC temporally outdated narrative",
+      "authored_at": "2020-01-15T09:00:00Z",
+      "source_label": "SYNTHETIC fixture generator; not clinician-authored",
+      "patient_id": "9441a0a3-466d-5e01-9b73-6bfdd016ec69",
+      "text": "SYNTHETIC NOTE — OUTDATED TEST DATA. This fictional history predates the 2026 encounter by six years and must not be treated as current evidence."
+    }
+  ]
+}
